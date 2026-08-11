@@ -43,10 +43,6 @@
             transition: background .6s ease;
         }
 
-        /* =========================
-           MODE MALAM
-        ========================= */
-
         body.night {
             background:
                 radial-gradient(circle at 20% 20%, rgba(255,255,255,.12), transparent 20%),
@@ -72,10 +68,6 @@
             background: rgba(255,255,255,.1);
         }
 
-        /* =========================
-           BINTANG
-        ========================= */
-
         .stars {
             position: fixed;
             inset: 0;
@@ -100,16 +92,11 @@
                 opacity: .2;
                 transform: scale(.8);
             }
-
             to {
                 opacity: 1;
                 transform: scale(1.2);
             }
         }
-
-        /* =========================
-           BUNGA BERGUGURAN
-        ========================= */
 
         .petals-container {
             position: fixed;
@@ -132,30 +119,22 @@
                 transform: translateX(0) rotate(0deg);
                 opacity: .9;
             }
-
             25% {
                 transform: translateX(80px) rotate(90deg);
             }
-
             50% {
                 transform: translateX(-40px) rotate(180deg);
                 opacity: 1;
             }
-
             75% {
                 transform: translateX(70px) rotate(270deg);
             }
-
             100% {
                 transform: translateX(-20px) rotate(360deg);
                 opacity: .1;
                 top: 110vh;
             }
         }
-
-        /* =========================
-           KUPU-KUPU
-        ========================= */
 
         .butterfly {
             position: fixed;
@@ -181,35 +160,27 @@
                 top: 70%;
                 transform: rotate(-10deg);
             }
-
             25% {
                 left: 25%;
                 top: 45%;
                 transform: rotate(10deg);
             }
-
             50% {
                 left: 55%;
                 top: 65%;
                 transform: rotate(-5deg);
             }
-
             75% {
                 left: 80%;
                 top: 30%;
                 transform: rotate(10deg);
             }
-
             100% {
                 left: 110%;
                 top: 50%;
                 transform: rotate(-10deg);
             }
         }
-
-        /* =========================
-           KARTU UTAMA
-        ========================= */
 
         .card {
             position: relative;
@@ -226,10 +197,6 @@
             text-align: center;
             transition: .5s;
         }
-
-        /* =========================
-           TOMBOL MODE & AUDIO
-        ========================= */
 
         .top-buttons {
             display: flex;
@@ -257,10 +224,6 @@
         .audio-btn:hover {
             transform: rotate(20deg) scale(1.1);
         }
-
-        /* =========================
-           TAMAN BUNGA
-        ========================= */
 
         .flower-garden {
             display: flex;
@@ -295,7 +258,6 @@
             0%,100% {
                 transform: rotate(-8deg) translateY(0);
             }
-
             50% {
                 transform: rotate(8deg) translateY(-12px);
             }
@@ -306,20 +268,14 @@
                 transform: scale(.5) rotate(-20deg);
                 opacity: .3;
             }
-
             70% {
                 transform: scale(1.4) rotate(10deg);
             }
-
             100% {
                 transform: scale(1) rotate(0);
                 opacity: 1;
             }
         }
-
-        /* =========================
-           NAMA
-        ========================= */
 
         .name-title {
             font-family: 'Dancing Script', cursive;
@@ -342,10 +298,6 @@
             margin: 5px 0 15px;
         }
 
-        /* =========================
-           TOMBOL
-        ========================= */
-
         .btn {
             border: none;
             padding: 12px 22px;
@@ -361,7 +313,6 @@
         .btn:hover {
             transform: translateY(-3px) scale(1.03);
         }
-
         .btn:active {
             transform: scale(.96);
         }
@@ -383,10 +334,6 @@
             background: rgba(255,255,255,.5);
             color: #7c3549;
         }
-
-        /* =========================
-           GALERI
-        ========================= */
 
         .section-title {
             font-family: 'Dancing Script', cursive;
@@ -434,10 +381,6 @@
             margin-top: 4px;
         }
 
-        /* =========================
-           PESAN ACAK
-        ========================= */
-
         .random-message {
             min-height: 45px;
             margin: 10px auto;
@@ -448,10 +391,6 @@
             transition: .3s;
         }
 
-        /* =========================
-           FOOTER
-        ========================= */
-
         footer {
             margin-top: 15px;
             font-size: .75rem;
@@ -459,10 +398,6 @@
             opacity: .8;
             letter-spacing: .5px;
         }
-
-        /* =========================
-           MODAL
-        ========================= */
 
         .modal {
             display: none;
@@ -510,10 +445,6 @@
             cursor: pointer;
         }
 
-        /* =========================
-           EFEK MENGETIK
-        ========================= */
-
         .typing-text {
             color: #3d2129;
             line-height: 1.9;
@@ -530,14 +461,8 @@
         }
 
         @keyframes cursorBlink {
-            50% {
-                opacity: 0;
-            }
+            50% { opacity: 0; }
         }
-
-        /* =========================
-           LIGHTBOX
-        ========================= */
 
         #lightbox {
             display: none;
@@ -572,10 +497,6 @@
             cursor: pointer;
         }
 
-        /* =========================
-           KEJUTAN
-        ========================= */
-
         .surprise-box {
             text-align: center;
         }
@@ -587,13 +508,8 @@
         }
 
         @keyframes heartbeat {
-            0%,100% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.2);
-            }
+            0%,100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
         }
 
         .surprise-text {
@@ -601,10 +517,6 @@
             line-height: 1.8;
             font-size: 1rem;
         }
-
-        /* =========================
-           KOTAK RAHASIA
-        ========================= */
 
         .secret-lock {
             font-size: 4rem;
@@ -633,20 +545,9 @@
         }
 
         @keyframes muncul {
-            from {
-                opacity: 0;
-                transform: translateY(15px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-
-        /* =========================
-           CONFETTI
-        ========================= */
 
         .confetti {
             position: fixed;
@@ -663,425 +564,160 @@
             }
         }
 
-        /* =========================
-           RESPONSIVE
-        ========================= */
-
         @media (max-width: 480px) {
-
-            body {
-                padding: 15px 10px;
-            }
-
-            .card {
-                padding: 23px 15px;
-                border-radius: 50px 50px 25px 25px;
-            }
-
-            .name-title {
-                font-size: 2.4rem;
-            }
-
-            .flower-garden {
-                font-size: 2.5rem;
-                gap: 8px;
-            }
-
-            .photo-gallery img {
-                width: 75px;
-                height: 75px;
-            }
-
-            .modal-content {
-                padding: 27px 18px;
-            }
-
-            .top-buttons {
-                gap: 6px;
-            }
-
+            body { padding: 15px 10px; }
+            .card { padding: 23px 15px; border-radius: 50px 50px 25px 25px; }
+            .name-title { font-size: 2.4rem; }
+            .flower-garden { font-size: 2.5rem; gap: 8px; }
+            .photo-gallery img { width: 75px; height: 75px; }
+            .modal-content { padding: 27px 18px; }
+            .top-buttons { gap: 6px; }
             .theme-btn,
-            .audio-btn {
-                width: 38px;
-                height: 38px;
-                font-size: 1.1rem;
-            }
+            .audio-btn { width: 38px; height: 38px; font-size: 1.1rem; }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- =========================
-         BINTANG MODE MALAM
-    ========================= -->
-
+    <!-- BINTANG MODE MALAM -->
     <div class="stars" id="stars"></div>
 
-    <!-- =========================
-         BUNGA BERGUGURAN
-    ========================= -->
-
+    <!-- BUNGA BERGUGURAN -->
     <div class="petals-container" id="petalsContainer"></div>
 
-    <!-- =========================
-         KUPU-KUPU
-    ========================= -->
-
+    <!-- KUPU-KUPU -->
     <div class="butterfly">🦋</div>
     <div class="butterfly">🦋</div>
     <div class="butterfly">🦋</div>
 
-    <!-- =========================
-         LIGHTBOX FOTO
-    ========================= -->
-
+    <!-- LIGHTBOX FOTO -->
     <div id="lightbox">
-
-        <span
-            class="lightbox-close"
-            onclick="tutupLightbox()"
-        >
-            ×
-        </span>
-
-        <img
-            id="lightboxImg"
-            src=""
-            alt="Foto besar"
-        />
-
+        <span class="lightbox-close" onclick="tutupLightbox()">×</span>
+        <img id="lightboxImg" src="" alt="Foto besar" />
     </div>
 
-    <!-- =========================
-         KARTU UTAMA
-    ========================= -->
-
+    <!-- KARTU UTAMA -->
     <main class="card">
 
         <!-- MODE MALAM + AUDIO -->
-
         <div class="top-buttons">
-
-            <button
-                class="audio-btn"
-                id="audioBtn"
-                title="Musik latar"
-            >
-                🔇
-            </button>
-
-            <button
-                class="theme-btn"
-                id="themeBtn"
-                title="Mode malam"
-            >
-                🌙
-            </button>
-
+            <button class="audio-btn" id="audioBtn" title="Musik latar">🔇</button>
+            <button class="theme-btn" id="themeBtn" title="Mode malam">🌙</button>
         </div>
 
         <!-- TAMAN BUNGA -->
-
         <div class="flower-garden">
-
             <span class="flower">🌷</span>
             <span class="flower">🌸</span>
             <span class="flower">🌹</span>
             <span class="flower">🌺</span>
             <span class="flower">🌻</span>
             <span class="flower">💐</span>
-
         </div>
 
         <!-- NAMA -->
-
-        <h1 class="name-title">
-            Rabiatul Adawiyah
-        </h1>
-
-        <div class="sub-caption">
-            ✨ Bidadari di hatiku ✨
-        </div>
+        <h1 class="name-title">Rabiatul Adawiyah</h1>
+        <div class="sub-caption">✨ Bidadari di hatiku ✨</div>
 
         <!-- SURAT -->
-
-        <button
-            class="btn btn-magic"
-            id="btnBukaSurat"
-        >
-            💌 Petik Bunga Spesial
-        </button>
+        <button class="btn btn-magic" id="btnBukaSurat">💌 Petik Bunga Spesial</button>
 
         <!-- PESAN ACAK -->
+        <div class="section-title">💖 Pesan Kecil</div>
+        <div class="random-message" id="randomMessage">Klik tombol di bawah untuk mendapatkan pesan 🌷</div>
+        <button class="btn btn-secret" onclick="pesanAcak()">💗 Pesan untuk dedee</button>
 
-        <div class="section-title">
-            💖 Pesan Kecil
-        </div>
-
-        <div
-            class="random-message"
-            id="randomMessage"
-        >
-            Klik tombol di bawah untuk mendapatkan pesan 🌷
-        </div>
-
-        <button
-            class="btn btn-secret"
-            onclick="pesanAcak()"
-        >
-            💗 Pesan untuk dedee
-        </button>
-
-        <!-- GALERI -->
-
-        <div class="section-title">
-            📸 Beberapa Foto Dedeee
-        </div>
-
+        <!-- GALERI (gambar lokal) -->
+        <div class="section-title">📸 Beberapa Foto Dedeee</div>
         <div class="photo-gallery">
 
             <div class="photo-item">
-
-                <img
-                    src="https://files.catbox.moe/qly9mr.jpg"
-                    alt="Foto 1"
-                    onclick="bukaLightbox(this.src)"
-                />
-
-                <div class="photo-caption">
-                    🌷 Kenangan
-                </div>
-
+                <img src="images/foto1.jpg"
+                     alt="Foto 1"
+                     onclick="bukaLightbox(this.src)"
+                     onerror="this.src='images/placeholder.jpg'; this.alt='Gambar tidak ditemukan';" />
+                <div class="photo-caption">🌷 Kenangan</div>
             </div>
 
             <div class="photo-item">
-
-                <img
-                    src="https://files.catbox.moe/gxt0qn.jpg"
-                    alt="Foto 2"
-                    onclick="bukaLightbox(this.src)"
-                />
-
-                <div class="photo-caption">
-                    🌸 Senyuman
-                </div>
-
+                <img src="images/foto2.jpg"
+                     alt="Foto 2"
+                     onclick="bukaLightbox(this.src)"
+                     onerror="this.src='images/placeholder.jpg'; this.alt='Gambar tidak ditemukan';" />
+                <div class="photo-caption">🌸 Senyuman</div>
             </div>
 
             <div class="photo-item">
-
-                <img
-                    src="https://files.catbox.moe/3jocmg.jpg"
-                    alt="Foto 3"
-                    onclick="bukaLightbox(this.src)"
-                />
-
-                <div class="photo-caption">
-                    🌹 Untuk dedeee
-                </div>
-
+                <img src="images/foto3.jpg"
+                     alt="Foto 3"
+                     onclick="bukaLightbox(this.src)"
+                     onerror="this.src='images/placeholder.jpg'; this.alt='Gambar tidak ditemukan';" />
+                <div class="photo-caption">🌹 Untuk dedeee</div>
             </div>
 
         </div>
 
         <!-- KEJUTAN -->
-
-        <button
-            class="btn btn-surprise"
-            onclick="bukaKejutan()"
-        >
-            ✨ Buka Kejutan
-        </button>
+        <button class="btn btn-surprise" onclick="bukaKejutan()">✨ Buka Kejutan</button>
 
         <!-- KOTAK RAHASIA -->
+        <button class="btn btn-secret" onclick="bukaRahasia()">🔐 Kotak Rahasia</button>
 
-        <button
-            class="btn btn-secret"
-            onclick="bukaRahasia()"
-        >
-            🔐 Kotak Rahasia
-        </button>
-
-        <footer>
-            🌼 Setiap kelopak jatuh, aku ingat kamu 🌼
-        </footer>
+        <footer>🌼 Setiap kelopak jatuh, aku ingat kamu 🌼</footer>
 
     </main>
 
-    <!-- =========================
-         MODAL SURAT
-    ========================= -->
-
-    <div
-        class="modal"
-        id="modalSurat"
-    >
-
+    <!-- MODAL SURAT -->
+    <div class="modal" id="modalSurat">
         <div class="modal-content">
-
-            <span
-                class="modal-close"
-                onclick="tutupModal()"
-            >
-                ✕
-            </span>
-
-            <h2>
-                💖 Untuk dedee
-            </h2>
-
-            <h2 style="font-size:1.9rem;">
-                Rabiatul Adawiyah
-            </h2>
-
-            <div
-                class="typing-text"
-                id="typingText"
-            ></div>
-
-            <button
-                class="btn btn-secret"
-                onclick="tutupModal()"
-            >
-                🌷 Kembali ke taman
-            </button>
-
+            <span class="modal-close" onclick="tutupModal()">✕</span>
+            <h2>💖 Untuk dedee</h2>
+            <h2 style="font-size:1.9rem;">Rabiatul Adawiyah</h2>
+            <div class="typing-text" id="typingText"></div>
+            <button class="btn btn-secret" onclick="tutupModal()">🌷 Kembali ke taman</button>
         </div>
-
     </div>
 
-    <!-- =========================
-         MODAL KEJUTAN
-    ========================= -->
-
-    <div
-        class="modal"
-        id="modalKejutan"
-    >
-
+    <!-- MODAL KEJUTAN -->
+    <div class="modal" id="modalKejutan">
         <div class="modal-content surprise-box">
-
-            <span
-                class="modal-close"
-                onclick="tutupKejutan()"
-            >
-                ✕
-            </span>
-
-            <div class="big-heart">
-                💖
-            </div>
-
-            <h2>
-                ✨ Sebuah Kejutan ✨
-            </h2>
-
+            <span class="modal-close" onclick="tutupKejutan()">✕</span>
+            <div class="big-heart">💖</div>
+            <h2>✨ Sebuah Kejutan ✨</h2>
             <p class="surprise-text">
-
-                Kalau kamu sampai membuka bagian ini,
-                berarti kamu sudah sampai di tempat
-                paling spesial di taman ini. 🌷
-
+                Kalau kamu sampai membuka bagian ini, berarti kamu sudah sampai di tempat paling spesial di taman ini. 🌷
                 <br><br>
-
-                Semoga hari-harimu selalu dipenuhi
-                hal-hal baik, senyuman, dan kebahagiaan.
-
+                Semoga hari-harimu selalu dipenuhi hal-hal baik, senyuman, dan kebahagiaan.
                 <br><br>
-
                 🌸 Tetap menjadi dirimu sendiri 🌸
-
             </p>
-
-            <button
-                class="btn btn-surprise"
-                onclick="buatConfetti()"
-            >
-                🎉 Rayakan!
-            </button>
-
+            <button class="btn btn-surprise" onclick="buatConfetti()">🎉 Rayakan!</button>
         </div>
-
     </div>
 
-    <!-- =========================
-         MODAL RAHASIA
-    ========================= -->
-
-    <div
-        class="modal"
-        id="modalRahasia"
-    >
-
+    <!-- MODAL RAHASIA -->
+    <div class="modal" id="modalRahasia">
         <div class="modal-content">
-
-            <span
-                class="modal-close"
-                onclick="tutupRahasia()"
-            >
-                ✕
-            </span>
-
-            <div
-                class="secret-lock"
-                id="secretLock"
-                onclick="bukaPesanRahasia()"
-            >
-                🔐
-            </div>
-
-            <h2>
-                Kotak Rahasia
-            </h2>
-
-            <p
-                style="
-                    color:#70404c;
-                    margin-top:8px;
-                "
-            >
-                Ada sesuatu yang tersembunyi
-                di dalamnya...
-            </p>
-
-            <div
-                class="secret-message"
-                id="secretMessage"
-            >
-
-                🌹 Kamu adalah salah satu alasan
-                kenapa halaman sederhana ini dibuat
-                dengan penuh bunga.
-
+            <span class="modal-close" onclick="tutupRahasia()">✕</span>
+            <div class="secret-lock" id="secretLock" onclick="bukaPesanRahasia()">🔐</div>
+            <h2>Kotak Rahasia</h2>
+            <p style="color:#70404c; margin-top:8px;">Ada sesuatu yang tersembunyi di dalamnya...</p>
+            <div class="secret-message" id="secretMessage">
+                🌹 Kamu adalah salah satu alasan kenapa halaman sederhana ini dibuat dengan penuh bunga.
                 <br><br>
-
-                Semoga selalu ada alasan untuk
-                tersenyum setiap harinya. 💖
-
+                Semoga selalu ada alasan untuk tersenyum setiap harinya. 💖
             </div>
-
         </div>
-
     </div>
 
-    <!-- =========================
-         AUDIO (disembunyikan)
-    ========================= -->
-
-    <audio
-        id="bgAudio"
-        src="https://files.catbox.moe/ungpyl.mp3"
-        loop
-        preload="auto"
-    ></audio>
+    <!-- AUDIO (lokal) -->
+    <audio id="bgAudio" src="audio/lagu.mp3" loop preload="auto"></audio>
 
     <script>
-
         /* =================================================
            KONTROL AUDIO
         ================================================= */
-
         const audio = document.getElementById('bgAudio');
         const audioBtn = document.getElementById('audioBtn');
         let audioPlaying = false;
@@ -1092,9 +728,7 @@
                 audioBtn.textContent = '🔇';
                 audioPlaying = false;
             } else {
-                audio.play().catch(() => {
-                    // jika autoplay diblokir, tetap diam
-                });
+                audio.play().catch(() => {});
                 audioBtn.textContent = '🔊';
                 audioPlaying = true;
             }
@@ -1102,15 +736,11 @@
 
         audioBtn.addEventListener('click', toggleAudio);
 
-        // Saat audio selesai (karena loop, tidak akan selesai)
-        // Tapi jika terjadi error, kita reset icon
         audio.addEventListener('error', () => {
             audioBtn.textContent = '🔇';
             audioPlaying = false;
         });
 
-        // Jika pengguna menekan tombol "putar" di browser,
-        // kita sinkronkan ikon
         audio.addEventListener('play', () => {
             audioBtn.textContent = '🔊';
             audioPlaying = true;
@@ -1121,11 +751,9 @@
             audioPlaying = false;
         });
 
-        // Coba putar otomatis saat pengguna pertama kali berinteraksi
-        // dengan halaman (klik di mana saja)
+        // Coba putar otomatis saat interaksi pertama
         document.addEventListener('click', () => {
             if (!audioPlaying && !audio.currentTime) {
-                // coba mainkan sekali secara diam-diam
                 audio.play().catch(() => {});
             }
         }, { once: true });
@@ -1134,195 +762,62 @@
         /* =================================================
            BUNGA BERGUGURAN
         ================================================= */
-
-        const petalEmojis = [
-            '🌸',
-            '🌷',
-            '🌺',
-            '🍃',
-            '💮',
-            '🌼',
-            '🏵️',
-            '🌸',
-            '🌷'
-        ];
-
-        const container =
-            document.getElementById(
-                'petalsContainer'
-            );
+        const petalEmojis = ['🌸', '🌷', '🌺', '🍃', '💮', '🌼', '🏵️', '🌸', '🌷'];
+        const container = document.getElementById('petalsContainer');
 
         function buatPetal() {
-
-            const petal =
-                document.createElement(
-                    'div'
-                );
-
+            const petal = document.createElement('div');
             petal.className = 'petal';
-
-            petal.innerText =
-                petalEmojis[
-                    Math.floor(
-                        Math.random() *
-                        petalEmojis.length
-                    )
-                ];
-
-            petal.style.left =
-                Math.random() * 100 + '%';
-
-            const size =
-                Math.random() * 1.5 + 1.2;
-
-            petal.style.fontSize =
-                size + 'rem';
-
-            const duration =
-                Math.random() * 7 + 6;
-
-            petal.style.animationDuration =
-                duration + 's';
-
-            container.appendChild(
-                petal
-            );
-
-            setTimeout(
-                () => petal.remove(),
-                (duration + 2) * 1000
-            );
+            petal.innerText = petalEmojis[Math.floor(Math.random() * petalEmojis.length)];
+            petal.style.left = Math.random() * 100 + '%';
+            const size = Math.random() * 1.5 + 1.2;
+            petal.style.fontSize = size + 'rem';
+            const duration = Math.random() * 7 + 6;
+            petal.style.animationDuration = duration + 's';
+            container.appendChild(petal);
+            setTimeout(() => petal.remove(), (duration + 2) * 1000);
         }
 
-        for (
-            let i = 0;
-            i < 35;
-            i++
-        ) {
-
-            setTimeout(
-                buatPetal,
-                i * 180
-            );
-
+        for (let i = 0; i < 35; i++) {
+            setTimeout(buatPetal, i * 180);
         }
-
-        setInterval(
-            buatPetal,
-            1300
-        );
+        setInterval(buatPetal, 1300);
 
 
         /* =================================================
            BUNGA MEKAR
         ================================================= */
+        document.querySelectorAll('.flower').forEach(flower => {
+            flower.addEventListener('click', () => {
+                flower.classList.remove('bloom');
+                void flower.offsetWidth;
+                flower.classList.add('bloom');
+                buatKelopakKecil(flower);
+            });
+        });
 
-        document
-            .querySelectorAll('.flower')
-            .forEach(
-                flower => {
-
-                    flower.addEventListener(
-                        'click',
-                        () => {
-
-                            flower.classList.remove(
-                                'bloom'
-                            );
-
-                            void flower.offsetWidth;
-
-                            flower.classList.add(
-                                'bloom'
-                            );
-
-                            buatKelopakKecil(
-                                flower
-                            );
-
-                        }
-                    );
-
-                }
-            );
-
-
-        function buatKelopakKecil(
-            target
-        ) {
-
-            const rect =
-                target.getBoundingClientRect();
-
-            for (
-                let i = 0;
-                i < 5;
-                i++
-            ) {
-
-                const el =
-                    document.createElement(
-                        'div'
-                    );
-
+        function buatKelopakKecil(target) {
+            const rect = target.getBoundingClientRect();
+            for (let i = 0; i < 5; i++) {
+                const el = document.createElement('div');
                 el.innerText = '🌸';
-
-                el.style.position =
-                    'fixed';
-
-                el.style.left =
-                    rect.left +
-                    rect.width / 2 +
-                    'px';
-
-                el.style.top =
-                    rect.top +
-                    'px';
-
+                el.style.position = 'fixed';
+                el.style.left = rect.left + rect.width / 2 + 'px';
+                el.style.top = rect.top + 'px';
                 el.style.zIndex = '100';
-
-                el.style.pointerEvents =
-                    'none';
-
-                el.style.fontSize =
-                    '.8rem';
-
-                document.body.appendChild(
-                    el
-                );
-
-                const x =
-                    (Math.random() - .5) *
-                    100;
-
-                const y =
-                    Math.random() * 100 +
-                    50;
-
-                el.animate(
-                    [
-                        {
-                            transform:
-                                'translate(0,0)',
-                            opacity: 1
-                        },
-                        {
-                            transform:
-                                `translate(${x}px,${y}px) rotate(180deg)`,
-                            opacity: 0
-                        }
-                    ],
-                    {
-                        duration: 900,
-                        easing: 'ease-out'
-                    }
-                );
-
-                setTimeout(
-                    () => el.remove(),
-                    950
-                );
-
+                el.style.pointerEvents = 'none';
+                el.style.fontSize = '.8rem';
+                document.body.appendChild(el);
+                const x = (Math.random() - .5) * 100;
+                const y = Math.random() * 100 + 50;
+                el.animate([
+                    { transform: 'translate(0,0)', opacity: 1 },
+                    { transform: `translate(${x}px,${y}px) rotate(180deg)`, opacity: 0 }
+                ], {
+                    duration: 900,
+                    easing: 'ease-out'
+                });
+                setTimeout(() => el.remove(), 950);
             }
         }
 
@@ -1330,19 +825,10 @@
         /* =================================================
            MODAL SURAT + EFEK MENGETIK
         ================================================= */
-
-        const modalSurat =
-            document.getElementById(
-                'modalSurat'
-            );
-
-        const typingText =
-            document.getElementById(
-                'typingText'
-            );
-
+        const modalSurat = document.getElementById('modalSurat');
+        const typingText = document.getElementById('typingText');
         const surat =
-`🌹
+            `🌹
 
 Dari sekian banyak bunga di dunia,
 ada satu taman yang terasa lebih indah
@@ -1361,609 +847,225 @@ dan banyak alasan untuk tersenyum.
 Semoga hari ini menjadi hari
 yang indah untukmu. ❤️`;
 
-
         function bukaModal() {
-
-            modalSurat.classList.add(
-                'show'
-            );
-
+            modalSurat.classList.add('show');
             typingText.innerHTML = '';
-
             let i = 0;
 
             function ketik() {
-
-                if (
-                    i < surat.length
-                ) {
-
-                    typingText.innerHTML =
-                        surat
-                            .substring(
-                                0,
-                                i + 1
-                            )
-                            .replace(
-                                /\n/g,
-                                '<br>'
-                            ) +
-                        '<span class="cursor">|</span>';
-
+                if (i < surat.length) {
+                    typingText.innerHTML = surat.substring(0, i + 1).replace(/\n/g, '<br>') + '<span class="cursor">|</span>';
                     i++;
-
-                    setTimeout(
-                        ketik,
-                        25
-                    );
-
+                    setTimeout(ketik, 25);
                 }
-
             }
-
             ketik();
-
             jatuhkanHati();
-
         }
-
 
         function tutupModal() {
-
-            modalSurat.classList.remove(
-                'show'
-            );
-
+            modalSurat.classList.remove('show');
         }
 
-
-        document
-            .getElementById(
-                'btnBukaSurat'
-            )
-            .addEventListener(
-                'click',
-                bukaModal
-            );
+        document.getElementById('btnBukaSurat').addEventListener('click', bukaModal);
 
 
         /* =================================================
            HATI JATUH
         ================================================= */
-
         function jatuhkanHati() {
-
-            const hati = [
-                '❤️',
-                '💖',
-                '💕',
-                '✨',
-                '🌸'
-            ];
-
-            for (
-                let i = 0;
-                i < 20;
-                i++
-            ) {
-
-                setTimeout(
-                    () => {
-
-                        const el =
-                            document.createElement(
-                                'div'
-                            );
-
-                        el.style.position =
-                            'fixed';
-
-                        el.style.left =
-                            Math.random() *
-                            100 +
-                            'vw';
-
-                        el.style.top =
-                            '-40px';
-
-                        el.style.fontSize =
-                            Math.random() *
-                            1.5 +
-                            1.2 +
-                            'rem';
-
-                        el.style.zIndex =
-                            '998';
-
-                        el.style.pointerEvents =
-                            'none';
-
-                        el.innerText =
-                            hati[
-                                Math.floor(
-                                    Math.random() *
-                                    hati.length
-                                )
-                            ];
-
-                        document.body.appendChild(
-                            el
-                        );
-
-                        el.animate(
-                            [
-                                {
-                                    transform:
-                                        'translateY(0) rotate(0)',
-                                    opacity: 1
-                                },
-                                {
-                                    transform:
-                                        `translateY(110vh) rotate(${Math.random()*720}deg)`,
-                                    opacity: 0
-                                }
-                            ],
-                            {
-                                duration: 4000,
-                                easing: 'linear'
-                            }
-                        );
-
-                        setTimeout(
-                            () => el.remove(),
-                            4200
-                        );
-
-                    },
-                    i * 80
-                );
-
+            const hati = ['❤️', '💖', '💕', '✨', '🌸'];
+            for (let i = 0; i < 20; i++) {
+                setTimeout(() => {
+                    const el = document.createElement('div');
+                    el.style.position = 'fixed';
+                    el.style.left = Math.random() * 100 + 'vw';
+                    el.style.top = '-40px';
+                    el.style.fontSize = Math.random() * 1.5 + 1.2 + 'rem';
+                    el.style.zIndex = '998';
+                    el.style.pointerEvents = 'none';
+                    el.innerText = hati[Math.floor(Math.random() * hati.length)];
+                    document.body.appendChild(el);
+                    el.animate([
+                        { transform: 'translateY(0) rotate(0)', opacity: 1 },
+                        { transform: `translateY(110vh) rotate(${Math.random()*720}deg)`, opacity: 0 }
+                    ], {
+                        duration: 4000,
+                        easing: 'linear'
+                    });
+                    setTimeout(() => el.remove(), 4200);
+                }, i * 80);
             }
-
         }
 
 
         /* =================================================
            LIGHTBOX
         ================================================= */
-
-        const lightbox =
-            document.getElementById(
-                'lightbox'
-            );
-
-        const lightboxImg =
-            document.getElementById(
-                'lightboxImg'
-            );
-
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
 
         function bukaLightbox(src) {
-
             lightboxImg.src = src;
-
-            lightbox.classList.add(
-                'show'
-            );
-
+            lightbox.classList.add('show');
         }
-
 
         function tutupLightbox() {
-
-            lightbox.classList.remove(
-                'show'
-            );
-
+            lightbox.classList.remove('show');
             lightboxImg.src = '';
-
         }
 
-
-        lightbox.addEventListener(
-            'click',
-            function(e) {
-
-                if (
-                    e.target === lightbox
-                ) {
-
-                    tutupLightbox();
-
-                }
-
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) {
+                tutupLightbox();
             }
-        );
+        });
 
 
         /* =================================================
            MODE MALAM
         ================================================= */
-
-        const themeBtn =
-            document.getElementById(
-                'themeBtn'
-            );
-
-
-        themeBtn.addEventListener(
-            'click',
-            () => {
-
-                document.body.classList.toggle(
-                    'night'
-                );
-
-                if (
-                    document.body.classList.contains(
-                        'night'
-                    )
-                ) {
-
-                    themeBtn.innerText =
-                        '☀️';
-
-                } else {
-
-                    themeBtn.innerText =
-                        '🌙';
-
-                }
-
-            }
-        );
+        const themeBtn = document.getElementById('themeBtn');
+        themeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('night');
+            themeBtn.innerText = document.body.classList.contains('night') ? '☀️' : '🌙';
+        });
 
 
         /* =================================================
            BINTANG
         ================================================= */
-
-        const stars =
-            document.getElementById(
-                'stars'
-            );
-
-
-        for (
-            let i = 0;
-            i < 45;
-            i++
-        ) {
-
-            const star =
-                document.createElement(
-                    'span'
-                );
-
+        const stars = document.getElementById('stars');
+        for (let i = 0; i < 45; i++) {
+            const star = document.createElement('span');
             star.className = 'star';
-
-            star.innerText =
-                Math.random() > .7
-                    ? '✦'
-                    : '·';
-
-            star.style.left =
-                Math.random() * 100 +
-                '%';
-
-            star.style.top =
-                Math.random() * 100 +
-                '%';
-
-            star.style.fontSize =
-                Math.random() * 1 +
-                .5 +
-                'rem';
-
-            star.style.animationDelay =
-                Math.random() * 2 +
-                's';
-
-            stars.appendChild(
-                star
-            );
-
+            star.innerText = Math.random() > .7 ? '✦' : '·';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.fontSize = Math.random() * 1 + .5 + 'rem';
+            star.style.animationDelay = Math.random() * 2 + 's';
+            stars.appendChild(star);
         }
 
 
         /* =================================================
            PESAN ACAK
         ================================================= */
-
         const messages = [
-
             '🌷 Semoga hari kamu selalu dipenuhi hal-hal baik.',
-
             '🌸 Jangan lupa tersenyum hari ini.',
-
             '🌹 Ada banyak hal indah yang masih menunggu di depan.',
-
             '💖 Semoga kamu selalu menemukan alasan untuk bahagia.',
-
             '🦋 Tetaplah menjadi versi terbaik dari dirimu sendiri.',
-
             '✨ Kamu pantas mendapatkan hari yang menyenangkan.',
-
             '🌼 Semoga langkahmu selalu dimudahkan.',
-
             '💐 Hari yang sederhana juga bisa menjadi kenangan indah.',
-
             '💕 Jangan lupa menjaga diri dan tetap tersenyum.'
-
         ];
-
         let lastMessage = -1;
 
-
         function pesanAcak() {
-
             let index;
-
             do {
-
-                index =
-                    Math.floor(
-                        Math.random() *
-                        messages.length
-                    );
-
-            } while (
-                index === lastMessage
-            );
-
+                index = Math.floor(Math.random() * messages.length);
+            } while (index === lastMessage);
             lastMessage = index;
-
-            const box =
-                document.getElementById(
-                    'randomMessage'
-                );
-
+            const box = document.getElementById('randomMessage');
             box.style.opacity = '0';
-
-            setTimeout(
-                () => {
-
-                    box.innerText =
-                        messages[index];
-
-                    box.style.opacity =
-                        '1';
-
-                },
-                200
-            );
-
+            setTimeout(() => {
+                box.innerText = messages[index];
+                box.style.opacity = '1';
+            }, 200);
         }
 
 
         /* =================================================
            MODAL KEJUTAN
         ================================================= */
-
-        const modalKejutan =
-            document.getElementById(
-                'modalKejutan'
-            );
-
+        const modalKejutan = document.getElementById('modalKejutan');
 
         function bukaKejutan() {
-
-            modalKejutan.classList.add(
-                'show'
-            );
-
-            setTimeout(
-                buatConfetti,
-                300
-            );
-
+            modalKejutan.classList.add('show');
+            setTimeout(buatConfetti, 300);
         }
 
-
         function tutupKejutan() {
-
-            modalKejutan.classList.remove(
-                'show'
-            );
-
+            modalKejutan.classList.remove('show');
         }
 
 
         /* =================================================
            CONFETTI
         ================================================= */
-
         function buatConfetti() {
-
-            const bentuk = [
-                '🌸',
-                '💖',
-                '🌷',
-                '✨',
-                '💕',
-                '🌹'
-            ];
-
-            for (
-                let i = 0;
-                i < 35;
-                i++
-            ) {
-
-                const el =
-                    document.createElement(
-                        'div'
-                    );
-
-                el.className =
-                    'confetti';
-
-                el.innerText =
-                    bentuk[
-                        Math.floor(
-                            Math.random() *
-                            bentuk.length
-                        )
-                    ];
-
-                el.style.left =
-                    Math.random() *
-                    100 +
-                    'vw';
-
-                el.style.fontSize =
-                    Math.random() *
-                    1.3 +
-                    .7 +
-                    'rem';
-
-                el.style.animationDuration =
-                    Math.random() *
-                    2 +
-                    2 +
-                    's';
-
-                document.body.appendChild(
-                    el
-                );
-
-                setTimeout(
-                    () => el.remove(),
-                    4500
-                );
-
+            const bentuk = ['🌸', '💖', '🌷', '✨', '💕', '🌹'];
+            for (let i = 0; i < 35; i++) {
+                const el = document.createElement('div');
+                el.className = 'confetti';
+                el.innerText = bentuk[Math.floor(Math.random() * bentuk.length)];
+                el.style.left = Math.random() * 100 + 'vw';
+                el.style.fontSize = Math.random() * 1.3 + .7 + 'rem';
+                el.style.animationDuration = Math.random() * 2 + 2 + 's';
+                document.body.appendChild(el);
+                setTimeout(() => el.remove(), 4500);
             }
-
         }
 
 
         /* =================================================
            KOTAK RAHASIA
         ================================================= */
-
-        const modalRahasia =
-            document.getElementById(
-                'modalRahasia'
-            );
-
+        const modalRahasia = document.getElementById('modalRahasia');
 
         function bukaRahasia() {
-
-            modalRahasia.classList.add(
-                'show'
-            );
-
-            document
-                .getElementById(
-                    'secretMessage'
-                )
-                .classList.remove(
-                    'show'
-                );
-
-            document.getElementById(
-                'secretLock'
-            ).innerText = '🔐';
-
+            modalRahasia.classList.add('show');
+            document.getElementById('secretMessage').classList.remove('show');
+            document.getElementById('secretLock').innerText = '🔐';
         }
-
 
         function tutupRahasia() {
-
-            modalRahasia.classList.remove(
-                'show'
-            );
-
+            modalRahasia.classList.remove('show');
         }
 
-
         function bukaPesanRahasia() {
-
-            const message =
-                document.getElementById(
-                    'secretMessage'
-                );
-
-            message.classList.add(
-                'show'
-            );
-
-            document.getElementById(
-                'secretLock'
-            ).innerText = '🔓';
-
+            const message = document.getElementById('secretMessage');
+            message.classList.add('show');
+            document.getElementById('secretLock').innerText = '🔓';
             buatConfetti();
-
         }
 
 
         /* =================================================
            TUTUP MODAL BACKGROUND
         ================================================= */
-
-        document
-            .querySelectorAll('.modal')
-            .forEach(
-                modal => {
-
-                    modal.addEventListener(
-                        'click',
-                        e => {
-
-                            if (
-                                e.target === modal
-                            ) {
-
-                                modal.classList.remove(
-                                    'show'
-                                );
-
-                            }
-
-                        }
-                    );
-
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('click', e => {
+                if (e.target === modal) {
+                    modal.classList.remove('show');
                 }
-            );
+            });
+        });
 
 
         /* =================================================
            TOMBOL ESC
         ================================================= */
-
-        document.addEventListener(
-            'keydown',
-            e => {
-
-                if (
-                    e.key === 'Escape'
-                ) {
-
-                    tutupModal();
-                    tutupKejutan();
-                    tutupRahasia();
-                    tutupLightbox();
-
-                }
-
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') {
+                tutupModal();
+                tutupKejutan();
+                tutupRahasia();
+                tutupLightbox();
             }
-        );
+        });
 
 
         /* =================================================
            PESAN AWAL
         ================================================= */
+        setTimeout(pesanAcak, 1000);
 
-        setTimeout(
-            pesanAcak,
-            1000
-        );
-
-
-        console.log(
-            '🌷 Website Rabiatul Adawiyah siap!'
-        );
-
+        console.log('🌷 Website Rabiatul Adawiyah siap!');
     </script>
 
 </body>
