@@ -1,0 +1,1970 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#e6b0c2" />
+
+    <title>🌷 Kebun Bunga untuk Rabiatul Adawiyah</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --pink: #b34a60;
+            --dark-pink: #682d3b;
+            --text: #3d2129;
+            --glass: rgba(255,255,255,.28);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+            background:
+                radial-gradient(circle at 20% 20%, rgba(255,255,255,.5), transparent 25%),
+                radial-gradient(circle at 80% 80%, rgba(255,182,193,.5), transparent 30%),
+                linear-gradient(145deg, #ffe7ec 0%, #f8cdd8 40%, #e6b0c2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            position: relative;
+            padding: 25px 15px;
+            transition: background .6s ease;
+        }
+
+        /* =========================
+           MODE MALAM
+        ========================= */
+
+        body.night {
+            background:
+                radial-gradient(circle at 20% 20%, rgba(255,255,255,.12), transparent 20%),
+                radial-gradient(circle at 80% 30%, rgba(120,100,180,.18), transparent 25%),
+                linear-gradient(145deg, #171326, #281a32, #40233c);
+        }
+
+        body.night .card {
+            background: rgba(30,20,40,.55);
+            border-color: rgba(255,255,255,.2);
+        }
+
+        body.night .name-title {
+            color: #ffd4df;
+        }
+
+        body.night .sub-caption,
+        body.night footer {
+            color: #f4ccd8;
+        }
+
+        body.night .sub-caption {
+            background: rgba(255,255,255,.1);
+        }
+
+        /* =========================
+           BINTANG
+        ========================= */
+
+        .stars {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity .5s;
+            z-index: 0;
+        }
+
+        body.night .stars {
+            opacity: 1;
+        }
+
+        .star {
+            position: absolute;
+            color: white;
+            animation: kedip 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes kedip {
+            from {
+                opacity: .2;
+                transform: scale(.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+
+        /* =========================
+           BUNGA BERGUGURAN
+        ========================= */
+
+        .petals-container {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 2;
+            overflow: hidden;
+        }
+
+        .petal {
+            position: absolute;
+            top: -60px;
+            animation: jatuhBergoyang linear infinite;
+            opacity: .8;
+            user-select: none;
+        }
+
+        @keyframes jatuhBergoyang {
+            0% {
+                transform: translateX(0) rotate(0deg);
+                opacity: .9;
+            }
+
+            25% {
+                transform: translateX(80px) rotate(90deg);
+            }
+
+            50% {
+                transform: translateX(-40px) rotate(180deg);
+                opacity: 1;
+            }
+
+            75% {
+                transform: translateX(70px) rotate(270deg);
+            }
+
+            100% {
+                transform: translateX(-20px) rotate(360deg);
+                opacity: .1;
+                top: 110vh;
+            }
+        }
+
+        /* =========================
+           KUPU-KUPU
+        ========================= */
+
+        .butterfly {
+            position: fixed;
+            z-index: 3;
+            pointer-events: none;
+            font-size: 2rem;
+            animation: terbang 12s linear infinite;
+        }
+
+        .butterfly:nth-child(2) {
+            animation-duration: 16s;
+            animation-delay: 3s;
+        }
+
+        .butterfly:nth-child(3) {
+            animation-duration: 20s;
+            animation-delay: 6s;
+        }
+
+        @keyframes terbang {
+            0% {
+                left: -10%;
+                top: 70%;
+                transform: rotate(-10deg);
+            }
+
+            25% {
+                left: 25%;
+                top: 45%;
+                transform: rotate(10deg);
+            }
+
+            50% {
+                left: 55%;
+                top: 65%;
+                transform: rotate(-5deg);
+            }
+
+            75% {
+                left: 80%;
+                top: 30%;
+                transform: rotate(10deg);
+            }
+
+            100% {
+                left: 110%;
+                top: 50%;
+                transform: rotate(-10deg);
+            }
+        }
+
+        /* =========================
+           KARTU UTAMA
+        ========================= */
+
+        .card {
+            position: relative;
+            z-index: 10;
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            padding: 30px 25px;
+            border-radius: 70px 70px 35px 35px;
+            box-shadow: 0 30px 60px rgba(120,50,70,.3);
+            border: 2px solid rgba(255,255,255,.55);
+            max-width: 550px;
+            width: 100%;
+            text-align: center;
+            transition: .5s;
+        }
+
+        /* =========================
+           TOMBOL MODE & AUDIO
+        ========================= */
+
+        .top-buttons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-bottom: -10px;
+        }
+
+        .theme-btn,
+        .audio-btn {
+            border: none;
+            background: rgba(255,255,255,.45);
+            width: 43px;
+            height: 43px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.3rem;
+            transition: .3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .theme-btn:hover,
+        .audio-btn:hover {
+            transform: rotate(20deg) scale(1.1);
+        }
+
+        /* =========================
+           TAMAN BUNGA
+        ========================= */
+
+        .flower-garden {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin: 10px 0;
+            font-size: 3rem;
+        }
+
+        .flower {
+            display: inline-block;
+            cursor: pointer;
+            filter: drop-shadow(0 8px 12px rgba(0,0,0,.1));
+            transition: .4s;
+            animation: goyang 3.5s ease-in-out infinite;
+        }
+
+        .flower:nth-child(even) {
+            animation-delay: .5s;
+        }
+
+        .flower:hover {
+            transform: scale(1.25) rotate(8deg);
+        }
+
+        .flower.bloom {
+            animation: mekar .8s ease forwards;
+        }
+
+        @keyframes goyang {
+            0%,100% {
+                transform: rotate(-8deg) translateY(0);
+            }
+
+            50% {
+                transform: rotate(8deg) translateY(-12px);
+            }
+        }
+
+        @keyframes mekar {
+            0% {
+                transform: scale(.5) rotate(-20deg);
+                opacity: .3;
+            }
+
+            70% {
+                transform: scale(1.4) rotate(10deg);
+            }
+
+            100% {
+                transform: scale(1) rotate(0);
+                opacity: 1;
+            }
+        }
+
+        /* =========================
+           NAMA
+        ========================= */
+
+        .name-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            color: #852d44;
+            text-shadow:
+                0 0 20px rgba(255,182,193,.8),
+                0 8px 20px rgba(80,20,30,.2);
+            margin-top: 5px;
+        }
+
+        .sub-caption {
+            color: #6b3b48;
+            font-size: .9rem;
+            font-weight: 600;
+            background: rgba(255,255,255,.4);
+            padding: 6px 18px;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 5px 0 15px;
+        }
+
+        /* =========================
+           TOMBOL
+        ========================= */
+
+        .btn {
+            border: none;
+            padding: 12px 22px;
+            border-radius: 50px;
+            font-size: .95rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: .25s;
+            margin: 5px;
+            font-family: inherit;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px) scale(1.03);
+        }
+
+        .btn:active {
+            transform: scale(.96);
+        }
+
+        .btn-magic {
+            background: #b34a60;
+            color: white;
+            box-shadow: 0 7px 0 #682d3b;
+            padding: 14px 28px;
+        }
+
+        .btn-surprise {
+            background: linear-gradient(135deg,#ff8fab,#c95d79);
+            color: white;
+            box-shadow: 0 6px 15px rgba(180,60,80,.3);
+        }
+
+        .btn-secret {
+            background: rgba(255,255,255,.5);
+            color: #7c3549;
+        }
+
+        /* =========================
+           GALERI
+        ========================= */
+
+        .section-title {
+            font-family: 'Dancing Script', cursive;
+            color: #852d44;
+            font-size: 1.8rem;
+            margin: 18px 0 8px;
+        }
+
+        .photo-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            overflow-x: auto;
+            padding: 8px 5px 14px;
+            scrollbar-width: none;
+        }
+
+        .photo-gallery::-webkit-scrollbar {
+            display: none;
+        }
+
+        .photo-item {
+            flex: 0 0 auto;
+            text-align: center;
+        }
+
+        .photo-gallery img {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 30px 10px 30px 10px;
+            border: 3px solid rgba(255,255,255,.75);
+            box-shadow: 0 8px 18px rgba(80,30,40,.25);
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .photo-gallery img:hover {
+            transform: scale(1.1) rotate(-3deg);
+        }
+
+        .photo-caption {
+            font-size: .65rem;
+            color: #70404c;
+            margin-top: 4px;
+        }
+
+        /* =========================
+           PESAN ACAK
+        ========================= */
+
+        .random-message {
+            min-height: 45px;
+            margin: 10px auto;
+            max-width: 430px;
+            color: #542b36;
+            font-size: .9rem;
+            font-style: italic;
+            transition: .3s;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            margin-top: 15px;
+            font-size: .75rem;
+            color: #7a4b54;
+            opacity: .8;
+            letter-spacing: .5px;
+        }
+
+        /* =========================
+           MODAL
+        ========================= */
+
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(40,10,20,.65);
+            backdrop-filter: blur(8px);
+            z-index: 999;
+            justify-content: center;
+            align-items: center;
+            padding: 18px;
+        }
+
+        .modal.show {
+            display: flex;
+            animation: fadeIn .35s ease;
+        }
+
+        .modal-content {
+            background: #fff9fa;
+            padding: 30px 25px;
+            border-radius: 50px 50px 25px 25px;
+            max-width: 460px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 40px 80px rgba(0,0,0,.4);
+            border: 4px solid #fccad7;
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-content h2 {
+            font-family: 'Dancing Script', cursive;
+            color: #a13d4b;
+            font-size: 2.4rem;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 22px;
+            font-size: 1.6rem;
+            color: #a13d4b;
+            cursor: pointer;
+        }
+
+        /* =========================
+           EFEK MENGETIK
+        ========================= */
+
+        .typing-text {
+            color: #3d2129;
+            line-height: 1.9;
+            font-size: .98rem;
+            margin: 15px 0;
+            min-height: 210px;
+            text-align: left;
+        }
+
+        .cursor {
+            display: inline-block;
+            animation: cursorBlink .7s infinite;
+            font-weight: bold;
+        }
+
+        @keyframes cursorBlink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        /* =========================
+           LIGHTBOX
+        ========================= */
+
+        #lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(20,5,10,.85);
+            backdrop-filter: blur(8px);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        #lightbox.show {
+            display: flex;
+        }
+
+        #lightbox img {
+            max-width: 92%;
+            max-height: 82%;
+            border-radius: 25px;
+            border: 5px solid white;
+            box-shadow: 0 30px 60px rgba(0,0,0,.6);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            color: white;
+            font-size: 2.8rem;
+            cursor: pointer;
+        }
+
+        /* =========================
+           KEJUTAN
+        ========================= */
+
+        .surprise-box {
+            text-align: center;
+        }
+
+        .big-heart {
+            font-size: 5rem;
+            animation: heartbeat 1.2s infinite;
+            margin: 15px;
+        }
+
+        @keyframes heartbeat {
+            0%,100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        .surprise-text {
+            color: #542b36;
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        /* =========================
+           KOTAK RAHASIA
+        ========================= */
+
+        .secret-lock {
+            font-size: 4rem;
+            margin: 15px;
+            cursor: pointer;
+            transition: .4s;
+        }
+
+        .secret-lock:hover {
+            transform: rotate(-10deg) scale(1.1);
+        }
+
+        .secret-message {
+            display: none;
+            background: #fff0f4;
+            padding: 18px;
+            border-radius: 25px;
+            color: #542b36;
+            line-height: 1.8;
+            margin-top: 15px;
+            animation: muncul .5s ease;
+        }
+
+        .secret-message.show {
+            display: block;
+        }
+
+        @keyframes muncul {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* =========================
+           CONFETTI
+        ========================= */
+
+        .confetti {
+            position: fixed;
+            top: -20px;
+            z-index: 10000;
+            pointer-events: none;
+            animation: confettiFall 3s linear forwards;
+        }
+
+        @keyframes confettiFall {
+            to {
+                transform: translateY(110vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 480px) {
+
+            body {
+                padding: 15px 10px;
+            }
+
+            .card {
+                padding: 23px 15px;
+                border-radius: 50px 50px 25px 25px;
+            }
+
+            .name-title {
+                font-size: 2.4rem;
+            }
+
+            .flower-garden {
+                font-size: 2.5rem;
+                gap: 8px;
+            }
+
+            .photo-gallery img {
+                width: 75px;
+                height: 75px;
+            }
+
+            .modal-content {
+                padding: 27px 18px;
+            }
+
+            .top-buttons {
+                gap: 6px;
+            }
+
+            .theme-btn,
+            .audio-btn {
+                width: 38px;
+                height: 38px;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         BINTANG MODE MALAM
+    ========================= -->
+
+    <div class="stars" id="stars"></div>
+
+    <!-- =========================
+         BUNGA BERGUGURAN
+    ========================= -->
+
+    <div class="petals-container" id="petalsContainer"></div>
+
+    <!-- =========================
+         KUPU-KUPU
+    ========================= -->
+
+    <div class="butterfly">🦋</div>
+    <div class="butterfly">🦋</div>
+    <div class="butterfly">🦋</div>
+
+    <!-- =========================
+         LIGHTBOX FOTO
+    ========================= -->
+
+    <div id="lightbox">
+
+        <span
+            class="lightbox-close"
+            onclick="tutupLightbox()"
+        >
+            ×
+        </span>
+
+        <img
+            id="lightboxImg"
+            src=""
+            alt="Foto besar"
+        />
+
+    </div>
+
+    <!-- =========================
+         KARTU UTAMA
+    ========================= -->
+
+    <main class="card">
+
+        <!-- MODE MALAM + AUDIO -->
+
+        <div class="top-buttons">
+
+            <button
+                class="audio-btn"
+                id="audioBtn"
+                title="Musik latar"
+            >
+                🔇
+            </button>
+
+            <button
+                class="theme-btn"
+                id="themeBtn"
+                title="Mode malam"
+            >
+                🌙
+            </button>
+
+        </div>
+
+        <!-- TAMAN BUNGA -->
+
+        <div class="flower-garden">
+
+            <span class="flower">🌷</span>
+            <span class="flower">🌸</span>
+            <span class="flower">🌹</span>
+            <span class="flower">🌺</span>
+            <span class="flower">🌻</span>
+            <span class="flower">💐</span>
+
+        </div>
+
+        <!-- NAMA -->
+
+        <h1 class="name-title">
+            Rabiatul Adawiyah
+        </h1>
+
+        <div class="sub-caption">
+            ✨ Bidadari di hatiku ✨
+        </div>
+
+        <!-- SURAT -->
+
+        <button
+            class="btn btn-magic"
+            id="btnBukaSurat"
+        >
+            💌 Petik Bunga Spesial
+        </button>
+
+        <!-- PESAN ACAK -->
+
+        <div class="section-title">
+            💖 Pesan Kecil
+        </div>
+
+        <div
+            class="random-message"
+            id="randomMessage"
+        >
+            Klik tombol di bawah untuk mendapatkan pesan 🌷
+        </div>
+
+        <button
+            class="btn btn-secret"
+            onclick="pesanAcak()"
+        >
+            💗 Pesan untuk dedee
+        </button>
+
+        <!-- GALERI -->
+
+        <div class="section-title">
+            📸 Beberapa Foto Dedeee
+        </div>
+
+        <div class="photo-gallery">
+
+            <div class="photo-item">
+
+                <img
+                    src="https://files.catbox.moe/qly9mr.jpg"
+                    alt="Foto 1"
+                    onclick="bukaLightbox(this.src)"
+                />
+
+                <div class="photo-caption">
+                    🌷 Kenangan
+                </div>
+
+            </div>
+
+            <div class="photo-item">
+
+                <img
+                    src="https://files.catbox.moe/gxt0qn.jpg"
+                    alt="Foto 2"
+                    onclick="bukaLightbox(this.src)"
+                />
+
+                <div class="photo-caption">
+                    🌸 Senyuman
+                </div>
+
+            </div>
+
+            <div class="photo-item">
+
+                <img
+                    src="https://files.catbox.moe/3jocmg.jpg"
+                    alt="Foto 3"
+                    onclick="bukaLightbox(this.src)"
+                />
+
+                <div class="photo-caption">
+                    🌹 Untuk dedeee
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- KEJUTAN -->
+
+        <button
+            class="btn btn-surprise"
+            onclick="bukaKejutan()"
+        >
+            ✨ Buka Kejutan
+        </button>
+
+        <!-- KOTAK RAHASIA -->
+
+        <button
+            class="btn btn-secret"
+            onclick="bukaRahasia()"
+        >
+            🔐 Kotak Rahasia
+        </button>
+
+        <footer>
+            🌼 Setiap kelopak jatuh, aku ingat kamu 🌼
+        </footer>
+
+    </main>
+
+    <!-- =========================
+         MODAL SURAT
+    ========================= -->
+
+    <div
+        class="modal"
+        id="modalSurat"
+    >
+
+        <div class="modal-content">
+
+            <span
+                class="modal-close"
+                onclick="tutupModal()"
+            >
+                ✕
+            </span>
+
+            <h2>
+                💖 Untuk dedee
+            </h2>
+
+            <h2 style="font-size:1.9rem;">
+                Rabiatul Adawiyah
+            </h2>
+
+            <div
+                class="typing-text"
+                id="typingText"
+            ></div>
+
+            <button
+                class="btn btn-secret"
+                onclick="tutupModal()"
+            >
+                🌷 Kembali ke taman
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- =========================
+         MODAL KEJUTAN
+    ========================= -->
+
+    <div
+        class="modal"
+        id="modalKejutan"
+    >
+
+        <div class="modal-content surprise-box">
+
+            <span
+                class="modal-close"
+                onclick="tutupKejutan()"
+            >
+                ✕
+            </span>
+
+            <div class="big-heart">
+                💖
+            </div>
+
+            <h2>
+                ✨ Sebuah Kejutan ✨
+            </h2>
+
+            <p class="surprise-text">
+
+                Kalau kamu sampai membuka bagian ini,
+                berarti kamu sudah sampai di tempat
+                paling spesial di taman ini. 🌷
+
+                <br><br>
+
+                Semoga hari-harimu selalu dipenuhi
+                hal-hal baik, senyuman, dan kebahagiaan.
+
+                <br><br>
+
+                🌸 Tetap menjadi dirimu sendiri 🌸
+
+            </p>
+
+            <button
+                class="btn btn-surprise"
+                onclick="buatConfetti()"
+            >
+                🎉 Rayakan!
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- =========================
+         MODAL RAHASIA
+    ========================= -->
+
+    <div
+        class="modal"
+        id="modalRahasia"
+    >
+
+        <div class="modal-content">
+
+            <span
+                class="modal-close"
+                onclick="tutupRahasia()"
+            >
+                ✕
+            </span>
+
+            <div
+                class="secret-lock"
+                id="secretLock"
+                onclick="bukaPesanRahasia()"
+            >
+                🔐
+            </div>
+
+            <h2>
+                Kotak Rahasia
+            </h2>
+
+            <p
+                style="
+                    color:#70404c;
+                    margin-top:8px;
+                "
+            >
+                Ada sesuatu yang tersembunyi
+                di dalamnya...
+            </p>
+
+            <div
+                class="secret-message"
+                id="secretMessage"
+            >
+
+                🌹 Kamu adalah salah satu alasan
+                kenapa halaman sederhana ini dibuat
+                dengan penuh bunga.
+
+                <br><br>
+
+                Semoga selalu ada alasan untuk
+                tersenyum setiap harinya. 💖
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- =========================
+         AUDIO (disembunyikan)
+    ========================= -->
+
+    <audio
+        id="bgAudio"
+        src="https://files.catbox.moe/ungpyl.mp3"
+        loop
+        preload="auto"
+    ></audio>
+
+    <script>
+
+        /* =================================================
+           KONTROL AUDIO
+        ================================================= */
+
+        const audio = document.getElementById('bgAudio');
+        const audioBtn = document.getElementById('audioBtn');
+        let audioPlaying = false;
+
+        function toggleAudio() {
+            if (audioPlaying) {
+                audio.pause();
+                audioBtn.textContent = '🔇';
+                audioPlaying = false;
+            } else {
+                audio.play().catch(() => {
+                    // jika autoplay diblokir, tetap diam
+                });
+                audioBtn.textContent = '🔊';
+                audioPlaying = true;
+            }
+        }
+
+        audioBtn.addEventListener('click', toggleAudio);
+
+        // Saat audio selesai (karena loop, tidak akan selesai)
+        // Tapi jika terjadi error, kita reset icon
+        audio.addEventListener('error', () => {
+            audioBtn.textContent = '🔇';
+            audioPlaying = false;
+        });
+
+        // Jika pengguna menekan tombol "putar" di browser,
+        // kita sinkronkan ikon
+        audio.addEventListener('play', () => {
+            audioBtn.textContent = '🔊';
+            audioPlaying = true;
+        });
+
+        audio.addEventListener('pause', () => {
+            audioBtn.textContent = '🔇';
+            audioPlaying = false;
+        });
+
+        // Coba putar otomatis saat pengguna pertama kali berinteraksi
+        // dengan halaman (klik di mana saja)
+        document.addEventListener('click', () => {
+            if (!audioPlaying && !audio.currentTime) {
+                // coba mainkan sekali secara diam-diam
+                audio.play().catch(() => {});
+            }
+        }, { once: true });
+
+
+        /* =================================================
+           BUNGA BERGUGURAN
+        ================================================= */
+
+        const petalEmojis = [
+            '🌸',
+            '🌷',
+            '🌺',
+            '🍃',
+            '💮',
+            '🌼',
+            '🏵️',
+            '🌸',
+            '🌷'
+        ];
+
+        const container =
+            document.getElementById(
+                'petalsContainer'
+            );
+
+        function buatPetal() {
+
+            const petal =
+                document.createElement(
+                    'div'
+                );
+
+            petal.className = 'petal';
+
+            petal.innerText =
+                petalEmojis[
+                    Math.floor(
+                        Math.random() *
+                        petalEmojis.length
+                    )
+                ];
+
+            petal.style.left =
+                Math.random() * 100 + '%';
+
+            const size =
+                Math.random() * 1.5 + 1.2;
+
+            petal.style.fontSize =
+                size + 'rem';
+
+            const duration =
+                Math.random() * 7 + 6;
+
+            petal.style.animationDuration =
+                duration + 's';
+
+            container.appendChild(
+                petal
+            );
+
+            setTimeout(
+                () => petal.remove(),
+                (duration + 2) * 1000
+            );
+        }
+
+        for (
+            let i = 0;
+            i < 35;
+            i++
+        ) {
+
+            setTimeout(
+                buatPetal,
+                i * 180
+            );
+
+        }
+
+        setInterval(
+            buatPetal,
+            1300
+        );
+
+
+        /* =================================================
+           BUNGA MEKAR
+        ================================================= */
+
+        document
+            .querySelectorAll('.flower')
+            .forEach(
+                flower => {
+
+                    flower.addEventListener(
+                        'click',
+                        () => {
+
+                            flower.classList.remove(
+                                'bloom'
+                            );
+
+                            void flower.offsetWidth;
+
+                            flower.classList.add(
+                                'bloom'
+                            );
+
+                            buatKelopakKecil(
+                                flower
+                            );
+
+                        }
+                    );
+
+                }
+            );
+
+
+        function buatKelopakKecil(
+            target
+        ) {
+
+            const rect =
+                target.getBoundingClientRect();
+
+            for (
+                let i = 0;
+                i < 5;
+                i++
+            ) {
+
+                const el =
+                    document.createElement(
+                        'div'
+                    );
+
+                el.innerText = '🌸';
+
+                el.style.position =
+                    'fixed';
+
+                el.style.left =
+                    rect.left +
+                    rect.width / 2 +
+                    'px';
+
+                el.style.top =
+                    rect.top +
+                    'px';
+
+                el.style.zIndex = '100';
+
+                el.style.pointerEvents =
+                    'none';
+
+                el.style.fontSize =
+                    '.8rem';
+
+                document.body.appendChild(
+                    el
+                );
+
+                const x =
+                    (Math.random() - .5) *
+                    100;
+
+                const y =
+                    Math.random() * 100 +
+                    50;
+
+                el.animate(
+                    [
+                        {
+                            transform:
+                                'translate(0,0)',
+                            opacity: 1
+                        },
+                        {
+                            transform:
+                                `translate(${x}px,${y}px) rotate(180deg)`,
+                            opacity: 0
+                        }
+                    ],
+                    {
+                        duration: 900,
+                        easing: 'ease-out'
+                    }
+                );
+
+                setTimeout(
+                    () => el.remove(),
+                    950
+                );
+
+            }
+        }
+
+
+        /* =================================================
+           MODAL SURAT + EFEK MENGETIK
+        ================================================= */
+
+        const modalSurat =
+            document.getElementById(
+                'modalSurat'
+            );
+
+        const typingText =
+            document.getElementById(
+                'typingText'
+            );
+
+        const surat =
+`🌹
+
+Dari sekian banyak bunga di dunia,
+ada satu taman yang terasa lebih indah
+ketika kamu hadir di dalamnya.
+
+Setiap kelopak yang jatuh
+mengingatkan bahwa hal-hal indah
+layak untuk dihargai dan dijaga.
+
+Semoga langkahmu selalu dipenuhi
+kebahagiaan, ketenangan,
+dan banyak alasan untuk tersenyum.
+
+💐 Untuk Rabiatul Adawiyah 💐
+
+Semoga hari ini menjadi hari
+yang indah untukmu. ❤️`;
+
+
+        function bukaModal() {
+
+            modalSurat.classList.add(
+                'show'
+            );
+
+            typingText.innerHTML = '';
+
+            let i = 0;
+
+            function ketik() {
+
+                if (
+                    i < surat.length
+                ) {
+
+                    typingText.innerHTML =
+                        surat
+                            .substring(
+                                0,
+                                i + 1
+                            )
+                            .replace(
+                                /\n/g,
+                                '<br>'
+                            ) +
+                        '<span class="cursor">|</span>';
+
+                    i++;
+
+                    setTimeout(
+                        ketik,
+                        25
+                    );
+
+                }
+
+            }
+
+            ketik();
+
+            jatuhkanHati();
+
+        }
+
+
+        function tutupModal() {
+
+            modalSurat.classList.remove(
+                'show'
+            );
+
+        }
+
+
+        document
+            .getElementById(
+                'btnBukaSurat'
+            )
+            .addEventListener(
+                'click',
+                bukaModal
+            );
+
+
+        /* =================================================
+           HATI JATUH
+        ================================================= */
+
+        function jatuhkanHati() {
+
+            const hati = [
+                '❤️',
+                '💖',
+                '💕',
+                '✨',
+                '🌸'
+            ];
+
+            for (
+                let i = 0;
+                i < 20;
+                i++
+            ) {
+
+                setTimeout(
+                    () => {
+
+                        const el =
+                            document.createElement(
+                                'div'
+                            );
+
+                        el.style.position =
+                            'fixed';
+
+                        el.style.left =
+                            Math.random() *
+                            100 +
+                            'vw';
+
+                        el.style.top =
+                            '-40px';
+
+                        el.style.fontSize =
+                            Math.random() *
+                            1.5 +
+                            1.2 +
+                            'rem';
+
+                        el.style.zIndex =
+                            '998';
+
+                        el.style.pointerEvents =
+                            'none';
+
+                        el.innerText =
+                            hati[
+                                Math.floor(
+                                    Math.random() *
+                                    hati.length
+                                )
+                            ];
+
+                        document.body.appendChild(
+                            el
+                        );
+
+                        el.animate(
+                            [
+                                {
+                                    transform:
+                                        'translateY(0) rotate(0)',
+                                    opacity: 1
+                                },
+                                {
+                                    transform:
+                                        `translateY(110vh) rotate(${Math.random()*720}deg)`,
+                                    opacity: 0
+                                }
+                            ],
+                            {
+                                duration: 4000,
+                                easing: 'linear'
+                            }
+                        );
+
+                        setTimeout(
+                            () => el.remove(),
+                            4200
+                        );
+
+                    },
+                    i * 80
+                );
+
+            }
+
+        }
+
+
+        /* =================================================
+           LIGHTBOX
+        ================================================= */
+
+        const lightbox =
+            document.getElementById(
+                'lightbox'
+            );
+
+        const lightboxImg =
+            document.getElementById(
+                'lightboxImg'
+            );
+
+
+        function bukaLightbox(src) {
+
+            lightboxImg.src = src;
+
+            lightbox.classList.add(
+                'show'
+            );
+
+        }
+
+
+        function tutupLightbox() {
+
+            lightbox.classList.remove(
+                'show'
+            );
+
+            lightboxImg.src = '';
+
+        }
+
+
+        lightbox.addEventListener(
+            'click',
+            function(e) {
+
+                if (
+                    e.target === lightbox
+                ) {
+
+                    tutupLightbox();
+
+                }
+
+            }
+        );
+
+
+        /* =================================================
+           MODE MALAM
+        ================================================= */
+
+        const themeBtn =
+            document.getElementById(
+                'themeBtn'
+            );
+
+
+        themeBtn.addEventListener(
+            'click',
+            () => {
+
+                document.body.classList.toggle(
+                    'night'
+                );
+
+                if (
+                    document.body.classList.contains(
+                        'night'
+                    )
+                ) {
+
+                    themeBtn.innerText =
+                        '☀️';
+
+                } else {
+
+                    themeBtn.innerText =
+                        '🌙';
+
+                }
+
+            }
+        );
+
+
+        /* =================================================
+           BINTANG
+        ================================================= */
+
+        const stars =
+            document.getElementById(
+                'stars'
+            );
+
+
+        for (
+            let i = 0;
+            i < 45;
+            i++
+        ) {
+
+            const star =
+                document.createElement(
+                    'span'
+                );
+
+            star.className = 'star';
+
+            star.innerText =
+                Math.random() > .7
+                    ? '✦'
+                    : '·';
+
+            star.style.left =
+                Math.random() * 100 +
+                '%';
+
+            star.style.top =
+                Math.random() * 100 +
+                '%';
+
+            star.style.fontSize =
+                Math.random() * 1 +
+                .5 +
+                'rem';
+
+            star.style.animationDelay =
+                Math.random() * 2 +
+                's';
+
+            stars.appendChild(
+                star
+            );
+
+        }
+
+
+        /* =================================================
+           PESAN ACAK
+        ================================================= */
+
+        const messages = [
+
+            '🌷 Semoga hari kamu selalu dipenuhi hal-hal baik.',
+
+            '🌸 Jangan lupa tersenyum hari ini.',
+
+            '🌹 Ada banyak hal indah yang masih menunggu di depan.',
+
+            '💖 Semoga kamu selalu menemukan alasan untuk bahagia.',
+
+            '🦋 Tetaplah menjadi versi terbaik dari dirimu sendiri.',
+
+            '✨ Kamu pantas mendapatkan hari yang menyenangkan.',
+
+            '🌼 Semoga langkahmu selalu dimudahkan.',
+
+            '💐 Hari yang sederhana juga bisa menjadi kenangan indah.',
+
+            '💕 Jangan lupa menjaga diri dan tetap tersenyum.'
+
+        ];
+
+        let lastMessage = -1;
+
+
+        function pesanAcak() {
+
+            let index;
+
+            do {
+
+                index =
+                    Math.floor(
+                        Math.random() *
+                        messages.length
+                    );
+
+            } while (
+                index === lastMessage
+            );
+
+            lastMessage = index;
+
+            const box =
+                document.getElementById(
+                    'randomMessage'
+                );
+
+            box.style.opacity = '0';
+
+            setTimeout(
+                () => {
+
+                    box.innerText =
+                        messages[index];
+
+                    box.style.opacity =
+                        '1';
+
+                },
+                200
+            );
+
+        }
+
+
+        /* =================================================
+           MODAL KEJUTAN
+        ================================================= */
+
+        const modalKejutan =
+            document.getElementById(
+                'modalKejutan'
+            );
+
+
+        function bukaKejutan() {
+
+            modalKejutan.classList.add(
+                'show'
+            );
+
+            setTimeout(
+                buatConfetti,
+                300
+            );
+
+        }
+
+
+        function tutupKejutan() {
+
+            modalKejutan.classList.remove(
+                'show'
+            );
+
+        }
+
+
+        /* =================================================
+           CONFETTI
+        ================================================= */
+
+        function buatConfetti() {
+
+            const bentuk = [
+                '🌸',
+                '💖',
+                '🌷',
+                '✨',
+                '💕',
+                '🌹'
+            ];
+
+            for (
+                let i = 0;
+                i < 35;
+                i++
+            ) {
+
+                const el =
+                    document.createElement(
+                        'div'
+                    );
+
+                el.className =
+                    'confetti';
+
+                el.innerText =
+                    bentuk[
+                        Math.floor(
+                            Math.random() *
+                            bentuk.length
+                        )
+                    ];
+
+                el.style.left =
+                    Math.random() *
+                    100 +
+                    'vw';
+
+                el.style.fontSize =
+                    Math.random() *
+                    1.3 +
+                    .7 +
+                    'rem';
+
+                el.style.animationDuration =
+                    Math.random() *
+                    2 +
+                    2 +
+                    's';
+
+                document.body.appendChild(
+                    el
+                );
+
+                setTimeout(
+                    () => el.remove(),
+                    4500
+                );
+
+            }
+
+        }
+
+
+        /* =================================================
+           KOTAK RAHASIA
+        ================================================= */
+
+        const modalRahasia =
+            document.getElementById(
+                'modalRahasia'
+            );
+
+
+        function bukaRahasia() {
+
+            modalRahasia.classList.add(
+                'show'
+            );
+
+            document
+                .getElementById(
+                    'secretMessage'
+                )
+                .classList.remove(
+                    'show'
+                );
+
+            document.getElementById(
+                'secretLock'
+            ).innerText = '🔐';
+
+        }
+
+
+        function tutupRahasia() {
+
+            modalRahasia.classList.remove(
+                'show'
+            );
+
+        }
+
+
+        function bukaPesanRahasia() {
+
+            const message =
+                document.getElementById(
+                    'secretMessage'
+                );
+
+            message.classList.add(
+                'show'
+            );
+
+            document.getElementById(
+                'secretLock'
+            ).innerText = '🔓';
+
+            buatConfetti();
+
+        }
+
+
+        /* =================================================
+           TUTUP MODAL BACKGROUND
+        ================================================= */
+
+        document
+            .querySelectorAll('.modal')
+            .forEach(
+                modal => {
+
+                    modal.addEventListener(
+                        'click',
+                        e => {
+
+                            if (
+                                e.target === modal
+                            ) {
+
+                                modal.classList.remove(
+                                    'show'
+                                );
+
+                            }
+
+                        }
+                    );
+
+                }
+            );
+
+
+        /* =================================================
+           TOMBOL ESC
+        ================================================= */
+
+        document.addEventListener(
+            'keydown',
+            e => {
+
+                if (
+                    e.key === 'Escape'
+                ) {
+
+                    tutupModal();
+                    tutupKejutan();
+                    tutupRahasia();
+                    tutupLightbox();
+
+                }
+
+            }
+        );
+
+
+        /* =================================================
+           PESAN AWAL
+        ================================================= */
+
+        setTimeout(
+            pesanAcak,
+            1000
+        );
+
+
+        console.log(
+            '🌷 Website Rabiatul Adawiyah siap!'
+        );
+
+    </script>
+
+</body>
+</html>
