@@ -628,31 +628,22 @@
         <div class="random-message" id="randomMessage">Klik tombol di bawah untuk mendapatkan pesan 🌷</div>
         <button class="btn btn-secret" onclick="pesanAcak()">💗 Pesan untuk dedee</button>
 
-        <!-- GALERI (gambar lokal) -->
+        <!-- GALERI (foto di root) -->
         <div class="section-title">📸 Beberapa Foto Dedeee</div>
         <div class="photo-gallery">
 
             <div class="photo-item">
-                <img src="images/foto1.jpg"
-                     alt="Foto 1"
-                     onclick="bukaLightbox(this.src)"
-                     onerror="this.src='images/placeholder.jpg'; this.alt='Gambar tidak ditemukan';" />
+                <img src="foto1.jpg" alt="Foto 1" onclick="bukaLightbox(this.src)" />
                 <div class="photo-caption">🌷 Kenangan</div>
             </div>
 
             <div class="photo-item">
-                <img src="images/foto2.jpg"
-                     alt="Foto 2"
-                     onclick="bukaLightbox(this.src)"
-                     onerror="this.src='images/placeholder.jpg'; this.alt='Gambar tidak ditemukan';" />
+                <img src="foto2.jpg" alt="Foto 2" onclick="bukaLightbox(this.src)" />
                 <div class="photo-caption">🌸 Senyuman</div>
             </div>
 
             <div class="photo-item">
-                <img src="images/foto3.jpg"
-                     alt="Foto 3"
-                     onclick="bukaLightbox(this.src)"
-                     onerror="this.src='images/placeholder.jpg'; this.alt='Gambar tidak ditemukan';" />
+                <img src="foto3.jpg" alt="Foto 3" onclick="bukaLightbox(this.src)" />
                 <div class="photo-caption">🌹 Untuk dedeee</div>
             </div>
 
@@ -711,8 +702,8 @@
         </div>
     </div>
 
-    <!-- AUDIO (lokal) -->
-    <audio id="bgAudio" src="audio/lagu.mp3" loop preload="auto"></audio>
+    <!-- AUDIO (di root) -->
+    <audio id="bgAudio" src="lagu.mp3" loop preload="auto"></audio>
 
     <script>
         /* =================================================
